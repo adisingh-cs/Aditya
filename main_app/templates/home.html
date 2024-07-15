@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block page_title %}{{ page_title }}{% endblock page_title %}
+{% block content %}
+<h4 style="display: flex; align-items: center; cursor: default; text-indent: 5px;">
+    <a href="https://rb.gy/qws0y9">
+        <img src="../static/favicon.png" alt="logo">
+    </a> {{ user.get_full_name }}
+
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit" style="border: none; background-color: transparent;"><img src="../static/logout.png"
+                alt="logout icon"></button>
+    </form>
+</h4>
+
+<div id="spinnerContainer">
+    <img src="../static/favicon.png" alt="logo" style="height: 50px;">
+    <br><br>
+    <div class="loader"></div>
+    <h6><b>A</b>dvanced <b>D</b>ocument <b>I</b>nteraction <b>T</b>echology for <b>Y</b>outh <b>A</b>ssistant</h6>
+    <p>- Made with ❤️ by <a href="https://rb.gy/qws0y9">Aditya Singh.</a> -</p>
+</div>
+
+<div id="uploadFormContainer">
+    <button id="uploadButton" onclick="toggleForm()">📂 Upload Files</button>
+    <form onsubmit="uploadFile(event)" id="fileForm" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="file">Choose a file (.pdf, .docx, .xlsx only):</label>
+        <input type="file" name="file" accept=".docx, .pdf, .xlsx" id="file" required>
+        <button type="submit" class="btn btn-success">Analyze File</button>
+    </form>
+</div>
+
+<div class="display">
+    <img src="../static/favicon.png" alt="logo">
+    <h4>Project - ADITYA</h4>
+    <h6>Ask me Anything !</h6>
+</div>
+
+<div id="conversation">
+    {% for message in messages %}
+    <div class="message {% if message.role == 'user' %}user-message{% else %}assistant-message{% endif %}"></div>
+    {% endfor %}
+</div>
+
+<form id="questionForm">
+    <div>
+        <input type="text" name="question" id="question" placeholder="Type your query...">
+        <input type="submit" id="bt" value="Ask" onclick="return askQuestion(event)">
+        <button id="startVoiceInput">🎙️</button>
+        <button id="speakButton" onclick="return speakLatestResponse()">🔊</button>
+    </div>
+
+    <div class="action" onclick="actionToggle();">
+        <span>+</span>
+        <ul>
+            <a href="https://imagengen.pythonanywhere.com/">
+                <li><img src="../static/ai-image.png">AI - Image Generator</li>
+            </a>
+            <a href="https://datavisualizerproject.pythonanywhere.com/">
+                <li><img src="../static/chart.png">Data Visualization Tool</li>
+            </a>
+            <li id="downloadDocx"><a href="{% url 'export_docx' %}"><img src="../static/docx.png">.docx - Word File</a></li>
+            <li id="downloadCsv"><a href="{% url 'export_csv' %}"><img src="../static/csv.png">.csv - Excel File</a></li>
+            <li id="downloadPdf"><a href="{% url 'export_pdf' %}"><img src="../static/pdf.png">.pdf - PDF File</a></li>
+        </ul>
+    </div>
+
+</form>
+
+{% endblock %}

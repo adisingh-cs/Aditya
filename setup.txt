@@ -1,0 +1,24 @@
+Python 3.12.4 (required version)
+
+pip 24.1.2 (required version)
+
+pip install -r requirements.txt
+
+django-admin startproject project_name
+
+cd project_name
+
+python manage.py startapp main_app
+
+follow this --> https://youtu.be/kPTJ1uYLjgE?si=VFoJYdrYmogSyoBc
+
+
+
+
+Welcome {{ user.username }} <br><br>
+Email : {{ user.email }} <br><br>
+Full Name: {{ user.get_full_name }} <br><br>
+First Name: {{ user.first_name }} <br><br>
+Last Name: {{ user.last_name }} <br><br>
+Date Joined: {{ user.date_joined }} <br><br>
+

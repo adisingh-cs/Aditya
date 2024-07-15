@@ -46,6 +46,9 @@ def home(request):
     }
     return render(request, 'home.html', context)
 
+def error_handle(request, exception):
+    return render(request, '404.html')
+
 @csrf_exempt
 def ask_question(request):
     if request.method == 'POST':

@@ -34,5 +34,7 @@ urlpatterns = [
     path('export-csv/', views.export_csv, name='export_csv'),
 ]
 
+handler404 = 'main_app.views.error_handle'
+
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -157,9 +157,28 @@ async function streamText(text, element) {
 }
 
 function formatAssistantResponse(response) {
-    return response.replace(/\n/g, '<br>').replace(/ {2}/g, '&nbsp;&nbsp;');
+    return response
+        .replace(/\n/g, '<br>')
+        .replace(/ {2}/g, '&nbsp;&nbsp;')
+        .replace(/\*([^*]+)\*/g, '<b>$1</b>')
+        .replace(/```([^`]+)```/g, (match, code) => {
+            const buttonId = `copy-button-${Math.random().toString(36).substr(2, 9)}`;
+            return `<pre><code>${code}</code><button class="copy-button" id="${buttonId}" onclick="copyToClipboard(this)">Copy</button></pre>`;
+        });
 }
 
+function copyToClipboard(button) {
+    const codeElement = button.previousElementSibling;
+    const codeText = codeElement.innerText || codeElement.textContent;
+    const textarea = document.createElement('textarea');
+    textarea.value = codeText;
+    document.body.appendChild(textarea);
+    textarea.style.whiteSpace = 'pre';
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    alert('Code copied to clipboard!');
+}
 function speakLatestResponse() {
     event.preventDefault();
     var latestResponseElement = document.querySelector('.assistant-message:last-child');

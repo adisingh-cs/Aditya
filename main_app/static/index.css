@@ -12,6 +12,11 @@ a {
     text-decoration: none;
 }
 
+::selection{
+    color: white;
+    background-color: #203542;
+}
+
 .error-message,
 .success-message {
     font-weight: bold;
@@ -469,4 +474,29 @@ p {
 
 .action ul li:hover img {
     transform: scale(1.2);
+}
+
+pre, code {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+}
+
+pre {
+    overflow-x: auto;
+}
+
+.copy-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
 }

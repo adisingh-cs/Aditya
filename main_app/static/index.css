@@ -8,7 +8,7 @@ body {
     overflow: hidden;
 }
 
-a {
+a{
     text-decoration: none;
 }
 
@@ -447,18 +447,18 @@ p {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color: grey;
+    color: #fff;
     padding: 10px 0;
     font-weight: 600;
     transition: 0.47s ease;
 }
 
 .action ul li a{
-    color: grey;
+    color: #fff;
+    text-decoration: none;
 }
 
 .action ul li:hover {
-    color: #fff;
     background-color: #7e7e7e7e;
 }
 

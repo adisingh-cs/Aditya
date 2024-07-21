@@ -2,108 +2,196 @@
 {% block page_title %}{{ page_title }}{% endblock page_title %}
 {% block content %}
 
-<head>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-    <style media="screen">
-        *,
-        *:before,
-        *:after {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
+<style>
+    header {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
 
-        body {
-            background-color: #080710;
-        }
+    .logo {
+        display: flex;
+        align-items: center;
+    }
 
-        .background {
-            width: 430px;
-            height: 220px;
-            position: absolute;
-            transform: translate(-50%, -50%);
-            left: 50%;
-            top: 50%;
-        }
+    .logo img {
+        height: 50px;
+    }
 
-        .background .shape {
-            height: 200px;
-            width: 200px;
-            position: absolute;
-            border-radius: 50%;
-        }
+    .nav-buttons {
+        display: flex;
+        gap: 15px;
+    }
 
-        .shape:first-child {
-            background: linear-gradient(#1845ad,
-                    #23a2f6);
-            left: -80px;
-            top: -80px;
-        }
+    .nav-buttons a {
+        text-decoration: none;
+        color: #f5f5f5;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
 
-        .shape:last-child {
-            background: linear-gradient(to right,
-                    #ff512f,
-                    #f09819);
-            right: -30px;
-            bottom: -80px;
-        }
+    .nav-buttons a:hover {
+        background-color: #555;
+    }
 
-        form {
-            height: auto;
-            width: 400px;
-            background-color: rgba(255, 255, 255, 0.13);
-            position: absolute;
-            transform: translate(-50%, -50%);
-            top: 50%;
-            left: 50%;
-            display: grid;
-            justify-content: center;
-            border-radius: 10px;
-            justify-content: center;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-            padding: 50px 35px;
-        }
+    .main-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 80%;
+        width: 95%;
+        border: 2px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 50px;
+    }
 
-        form * {
-            font-family: 'Poppins', sans-serif;
-            color: #ffffff;
-            letter-spacing: 0.5px;
-            outline: none;
-            border: none;
-        }
+    .main-content h1 {
+        font-size: 3em;
+        color: #f5f5f5;
+        margin: 0;
+    }
 
-        form h3 {
-            font-size: 32px;
-            font-weight: 500;
-            line-height: 42px;
-            text-align: center;
-        }
+    .about {
+        position: absolute;
+        top: 160%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 80%;
+        width: 95%;
+        border: 2px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 50px;
+    }
 
+    .about h1 {
+        font-size: 3em;
+        color: #f5f5f5;
+        margin: 0;
+    }
 
-        i {
-            margin-right: 4px;
-        }
-    </style>
-</head>
+    #about {
+        position: absolute;
+        top: 110%;
+        left: 5%;
+        opacity: 0;
+    }
 
-<body>
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
+    .about-txt {
+        position: absolute;
+        top: 115%;
+        left: 5%;
+        opacity: 0;
+    }
+</style>
+
+<link rel="stylesheet" href="../static/pricing.css" />
+
+<header>
+    <div class="logo">
+        <a href="#"><img src="../static/favicon.png" alt="Logo"></a>
     </div>
-    <form>
-        <h3>Sign in Here</h3>
-        <br><br>
-        <a class="link" href="{% url 'social:begin' 'google-oauth2' %}">
-            <div class="btn btn-primary mb-2">
-                <i class="fab fa-google"></i> Sign in with Google
-            </div>
-        </a>
-    </form>
-</body>
-</html>
+    <div class="nav-buttons">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#pricing">Pricing</a>
+        <a href="{% url 'social:begin' 'google-oauth2' %}">Sign Up</a>
+    </div>
+</header>
+
+<div class="main-content" id="#">
+    <h1>Eternal's Hub</h1>
+</div>
+
+<div id="about"></div>
+<h1 class="about-txt">About</h1>
+<div class="about">
+    <h1>About</h1>
+</div>
+
+<h1 id="pricing">Pricing</h1>
+<section>
+    <div class="basic box">
+        <h2 class="title">Basic</h2>
+        <div class="cost">
+            <p class="amount">₹100/-</p>
+            <p class="txt">per month</p>
+        </div>
+        <div class="description">
+            <ul>
+                <li>Chat with AI</li>
+                <li>Supports Text & Voice Input</li>
+                <li>Export Conversations</li>
+                <li>Multiple Export Format Support</li>
+                <li>Voice output in English</li>
+            </ul>
+        </div>
+        <div class="button">
+            <button type="submit">Get it !</button>
+        </div>
+    </div>
+
+    <div class="standard box">
+        <h2 class="title">Standard</h2>
+        <div class="cost">
+            <p class="amount">₹250/-</p>
+            <p class="txt">per month</p>
+        </div>
+        <div class="description">
+            <ul>
+                <li>Chat with AI</li>
+                <li>Supports Text & Voice Input</li>
+                <li>Export Conversations</li>
+                <li>Multiple Export Format Support</li>
+                <li>Voice output in English</li>
+                <li>Supports File Input & Analyzing</li>
+            </ul>
+        </div>
+        <div class="button">
+            <button type="submit">Get it !</button>
+        </div>
+    </div>
+
+    <div class="business box">
+        <h2 class="title">Pro</h2>
+        <div class="cost">
+            <p class="amount">₹500/-</p>
+            <p class="txt">per month</p>
+        </div>
+        <div class="description">
+            <ul>
+                <li>Chat with AI</li>
+                <li>Supports Text & Voice Input</li>
+                <li>Export Conversations</li>
+                <li>Multiple Export Format Support</li>
+                <li>Voice output in Multiple Languages</li>
+                <li>Supports File Input & Analyzing</li>
+                <li>Image & PPT Generator </li>
+                <li>Access to Data Visualization Tool</li>
+            </ul>
+        </div>
+        <div class="button">
+            <button type="submit">Get it !</button>
+        </div>
+    </div>
+</section>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 {% endblock %}

@@ -35,16 +35,13 @@ messages = []
 # Create your views here.
 def login(request):
     context = {
-        'page_title': 'Login Page'
+        'page_title': 'Home Page'
     }
     return render(request, 'login.html', context)
 
 @login_required
 def home(request):
-    context = {
-        'page_title': 'Home Page'
-    }
-    return render(request, 'home.html', context)
+    return render(request, 'home.html')
 
 def error_handle(request, exception):
     return render(request, '404.html')

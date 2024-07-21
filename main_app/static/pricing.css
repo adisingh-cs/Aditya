@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+#pricing{
+    position: absolute;
+    top: 210%;
+    left: 5%;
+    opacity: 0;
+}
+
+section{
+    position: absolute;
+    top: 255%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 85%;
+    min-height: 500px;
+    width: 300px;
+    border-radius: 20px;
+    margin: 20px;    
+    background: #203542;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 20%);
+}
+
+.title{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1.2em;
+    font-weight: lighter;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: white;
+}
+
+.basic .title{
+    background: #C35A74;
+}
+
+.standard .title{
+    background: #307BAA;
+}
+
+.business .title{
+    background: #53BAB5;
+}
+
+.cost{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,20%);
+    display: flex;
+    justify-content:center;
+    border-radius: 17px;
+    width: 85%;
+    background: white;
+}
+
+.amount{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 7px;
+    color: #203542;
+    font-size: 2.8em;
+    font-weight: bolder;
+}
+
+.txt{
+    position: relative;
+    top: 0;
+    margin: auto;
+    color: grey;
+    font-weight: bold;
+}
+
+.description{
+    position: relative;
+    margin: auto;
+    font-size: 0.8em;
+    color: white;
+    cursor: default;
+}
+
+ul{
+    list-style: disc;
+}
+
+li{
+    margin-top: 10px;
+}
+
+.button{
+    margin: 0 auto 30px;
+}
+
+button{
+    height: 40px;
+    width: 250px;
+    font-size: 0.7em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #7D7C7C;
+    border: 2px solid #7D7C7C;
+    border-radius: 50px;
+    background: transparent;
+}
+
+button:hover{
+    color: white;
+    transition: 0.5s;
+    border: none;
+    background: #218838;
+}

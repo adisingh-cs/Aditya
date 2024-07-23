@@ -1,110 +1,14 @@
 {% extends 'base.html' %}
 {% block page_title %}{{ page_title }}{% endblock page_title %}
 {% block content %}
-
-<style>
-    header {
-        width: 100%;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #333;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1;
-    }
-
-    .logo {
-        display: flex;
-        align-items: center;
-    }
-
-    .logo img {
-        height: 50px;
-    }
-
-    .nav-buttons {
-        display: flex;
-        gap: 15px;
-    }
-
-    .nav-buttons a {
-        text-decoration: none;
-        color: #f5f5f5;
-        padding: 10px 15px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-
-    .nav-buttons a:hover {
-        background-color: #555;
-    }
-
-    .main-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 80%;
-        width: 95%;
-        border: 2px solid white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin-top: 50px;
-    }
-
-    .main-content h1 {
-        font-size: 3em;
-        color: #f5f5f5;
-        margin: 0;
-    }
-
-    .about {
-        position: absolute;
-        top: 160%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 80%;
-        width: 95%;
-        border: 2px solid white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin-top: 50px;
-    }
-
-    .about h1 {
-        font-size: 3em;
-        color: #f5f5f5;
-        margin: 0;
-    }
-
-    #about {
-        position: absolute;
-        top: 110%;
-        left: 5%;
-        opacity: 0;
-    }
-
-    .about-txt {
-        position: absolute;
-        top: 115%;
-        left: 5%;
-        opacity: 0;
-    }
-</style>
-
+<link rel="stylesheet" href="../static/login.css">
 <link rel="stylesheet" href="../static/pricing.css" />
+<link rel="stylesheet" href="../static/about.css">
 
 <header>
     <div class="logo">
-        <a href="#"><img src="../static/favicon.png" alt="Logo"></a>
+        <a href="https://rb.gy/qws0y9"><img src="../static/favicon.png" alt="Logo"></a>
+        <h3> Eternal's Hub</h3>
     </div>
     <div class="nav-buttons">
         <a href="#">Home</a>
@@ -115,13 +19,100 @@
 </header>
 
 <div class="main-content" id="#">
-    <h1>Eternal's Hub</h1>
+    <div id="particles-js"></div>
+    <h1>Project Aditya</h1>
+    <p>No BS, Just trying to help students !</p>
 </div>
+
+<div class="profile">
+    <div class="name">Aditya Singh</div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script src="../static/particles.js"></script>
 
 <div id="about"></div>
 <h1 class="about-txt">About</h1>
 <div class="about">
-    <h1>About</h1>
+    <div class="slider">
+        <div class="item">
+            <img src="https://unsplash.it/1920/1080?white" loading="eager" alt="">
+            <div class='content'>
+                <h2 class='title'>offers Data Visualization, Image & PPT Generation</h2>
+                <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                    praesentium nisi. Id laboriosam ipsam enim. </p>
+            </div>
+        </div>
+        <!-- visibele item -->
+        <div class="item">
+            <img src="https://unsplash.it/1920/1080?white" loading="eager" alt="Nobis Omnis" class="image" />
+            <div class='content'>
+                <h2 class='title'>AI based on Chat GPT Models</h2>
+                <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                    praesentium nisi. Id laboriosam ipsam enim. </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://unsplash.it/1920/1080?white" loading="eager" alt="Ut Distinctio" class="image" />
+            <div class='content'>
+                <h2 class='title'>Supports Text & Voice Input</h2>
+                <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                    praesentium nisi. Id laboriosam ipsam enim. </p>
+            </div>
+        </div>
+        <div class='item'>
+            <img src="https://unsplash.it/1920/1080?white" loading="eager" alt="Commodi Veniam" class="image" />
+            <div class='content'>
+                <h2 class='title'>Export Conversations</h2>
+                <p class='description'>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis
+                    inventore praesentium nisi. Id laboriosam ipsam enim.
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://unsplash.it/1920/1080?white" loading="eager" alt="Ipsam Tenetur" class="image" />
+            <div class='content'>
+                <h2 class='title'>Voice Output</h2>
+                <p class='description'>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis
+                    inventore praesentium nisi. Id laboriosam ipsam enim.
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://unsplash.it/1920/1080?white" loading="eager" alt="Nesciunt Consectetur Similique Sit"
+                class="image" />
+            <div class='content'>
+                <h2 class='title'>File Input & Analyzing</h2>
+                <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                    praesentium nisi. Id laboriosam ipsam enim. </p>
+            </div>
+        </div>
+    </div>
+    <nav class='nav'>
+        <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+        <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+    </nav>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        const slider = document.querySelector(".slider");
+
+        function activate(e) {
+            const items = document.querySelectorAll(".item");
+            e.target.matches(".next") && slider.append(items[0]);
+            e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
+        }
+
+        document.addEventListener("click", activate, false);
+    </script>
 </div>
 
 <h1 id="pricing">Pricing</h1>

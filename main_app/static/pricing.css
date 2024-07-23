@@ -2,14 +2,16 @@
 
 #pricing{
     position: absolute;
-    top: 210%;
-    left: 5%;
-    opacity: 0;
+    top: 212%;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 1;
+    cursor: default;
 }
 
 section{
     position: absolute;
-    top: 255%;
+    top: 257%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 95%;
@@ -110,8 +112,8 @@ button{
     font-size: 0.7em;
     font-weight: bold;
     letter-spacing: 0.5px;
-    color: #7D7C7C;
-    border: 2px solid #7D7C7C;
+    color: #fff;
+    border: 2px solid #fff;
     border-radius: 50px;
     background: transparent;
 }
@@ -120,5 +122,5 @@ button:hover{
     color: white;
     transition: 0.5s;
     border: none;
-    background: #218838;
+    background: #7825d6;
 }

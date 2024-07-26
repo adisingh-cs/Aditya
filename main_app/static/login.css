@@ -84,6 +84,9 @@ header {
     position: relative;
     top: 27%;
     left: 5%;
+    width: 45%;
+    font-size: 1em;
+    font-weight: bold;
     color: #fff;
 }
 
@@ -95,10 +98,11 @@ header {
     border-radius: 50%;
     height: 300px;
     width: 300px;
-    background-color: white;
+    background: url(../static/Profile_Pic.jpg);
+    background-size: cover;
     display: flex;
     justify-content: center;
-    border: 7px solid #0056b3;
+    border: 7px solid #ffffff;
 }
 
 .profile .name{
@@ -111,6 +115,7 @@ header {
     align-items: center;
     border-radius: 7px;
     color: #7825d6;
+    cursor: default;
     background-color: #fff;
 }
 
@@ -131,7 +136,7 @@ header {
     background-color: #fff;
 }
 
-#about {
+#features {
     position: absolute;
     top: 110%;
     left: 5%;

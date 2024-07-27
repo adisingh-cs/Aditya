@@ -3,7 +3,7 @@
 {% block content %}
 <link rel="stylesheet" href="../static/login.css">
 <link rel="stylesheet" href="../static/pricing.css" />
-<link rel="stylesheet" href="../static/about.css">
+<link rel="stylesheet" href="../static/about.css"> 
 
 <header>
     <div class="logo">
@@ -14,9 +14,17 @@
         <a href="#">Home</a>
         <a href="#features">Features</a>
         <a href="#pricing">Pricing</a>
-        <!--<a href="{% url 'social:begin' 'google-oauth2' %}">Sign Up</a>-->
+        <a href="{% url 'social:begin' 'google-oauth2' %}">Sign Up</a>
     </div>
 </header>
+
+<div id="spinnerContainer">
+    <img src="../static/favicon.png" alt="logo" style="height: 50px;">
+    <br><br>
+    <div class="loader"></div>
+    <h6><b>A</b>dvanced <b>D</b>ocument <b>I</b>nteraction <b>T</b>echology for <b>Y</b>outh <b>A</b>ssistant</h6>
+    <p>- Made with ❤️ by <a href="https://rb.gy/qws0y9">Aditya Singh.</a> -</p>
+</div>  
 
 <div class="main-content" id="#">
     <div id="particles-js"></div>

@@ -119,19 +119,19 @@ img {
     }
 }
 
-h6{
+#spinnerContainer h6{
     margin-top: 50px;
     cursor: default;
 }
 
-h6 b{
+#spinnerContainer h6 b{
     margin: 7px;
     font-size: 20px;
     color: #0056b3;
     cursor: default;
 }
 
-p {
+#spinnerContainer p {
     position: relative;
     bottom: -100px;
     font-size: small;

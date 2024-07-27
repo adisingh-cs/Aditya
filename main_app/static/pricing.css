@@ -2,7 +2,7 @@
 
 #pricing{
     position: absolute;
-    top: 212%;
+    top: 215%;
     left: 50%;
     transform: translate(-50%);
     opacity: 1;
@@ -11,7 +11,7 @@
 
 section{
     position: absolute;
-    top: 257%;
+    top: 260%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 95%;

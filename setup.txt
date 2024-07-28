@@ -22,3 +22,7 @@ First Name: {{ user.first_name }} <br><br>
 Last Name: {{ user.last_name }} <br><br>
 Date Joined: {{ user.date_joined }} <br><br>
 
+
+Username : Atma
+Email address: adisingh.cs@gmail.com
+Pass: asae

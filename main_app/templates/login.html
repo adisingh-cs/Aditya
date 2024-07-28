@@ -3,7 +3,7 @@
 {% block content %}
 <link rel="stylesheet" href="../static/login.css">
 <link rel="stylesheet" href="../static/pricing.css" />
-<link rel="stylesheet" href="../static/about.css"> 
+<link rel="stylesheet" href="../static/about.css">
 
 <header>
     <div class="logo">
@@ -14,7 +14,7 @@
         <a href="#">Home</a>
         <a href="#features">Features</a>
         <a href="#pricing">Pricing</a>
-        <a href="{% url 'social:begin' 'google-oauth2' %}">Sign Up</a>
+        <!--<a href="{% url 'social:begin' 'google-oauth2' %}">Sign Up</a>-->
     </div>
 </header>
 
@@ -24,17 +24,23 @@
     <div class="loader"></div>
     <h6><b>A</b>dvanced <b>D</b>ocument <b>I</b>nteraction <b>T</b>echology for <b>Y</b>outh <b>A</b>ssistant</h6>
     <p>- Made with ❤️ by <a href="https://rb.gy/qws0y9">Aditya Singh.</a> -</p>
-</div>  
+</div>
 
 <div class="main-content" id="#">
     <div id="particles-js"></div>
-    <h1>Project Aditya</h1>
-    <p>Welcome to Project Aditya, your ultimate companion for seamless and efficient study sessions! Our innovative web
-        application offers a suite of powerful features designed to enhance your learning experience. From AI-powered
-        chat assistance and effortless text and voice input support to versatile data export options and multilingual
-        voice output, Project Aditya is here to cater to all your academic needs. Upload your files for detailed
-        analysis, create stunning presentations, and visualize complex data effortlessly. With Project Aditya, transform
-        your study routine into a streamlined, stress-free journey towards academic excellence.</p>
+    <div class="main-txt">
+        <h1>Project Aditya</h1>
+        <p>Welcome to Project Aditya, your ultimate companion for seamless and efficient study sessions! Our innovative
+            web
+            application offers a suite of powerful features designed to enhance your learning experience. From
+            AI-powered
+            chat assistance and effortless text and voice input support to versatile data export options and
+            multilingual
+            voice output, Project Aditya is here to cater to all your academic needs. Upload your files for detailed
+            analysis, create stunning presentations, and visualize complex data effortlessly. With Project Aditya,
+            transform
+            your study routine into a streamlined, stress-free journey towards academic excellence.</p>
+    </div>
 </div>
 
 <div class="profile">
@@ -157,7 +163,7 @@
     <div class="basic box">
         <h2 class="title">Basic</h2>
         <div class="cost">
-            <p class="amount">₹100/-</p>
+            <p class="amount">₹125/-</p>
             <p class="txt">per month</p>
         </div>
         <div class="description">
@@ -207,9 +213,9 @@
                 <li>Supports Text & Voice Input</li>
                 <li>Export Conversations</li>
                 <li>Multiple Export Format Support</li>
-                <li>Voice output in Multiple Languages</li>
+                <li>Voice output in English</li>
                 <li>Supports File Input & Analyzing</li>
-                <li>Image & PPT Generator </li>
+                <li>AI Image Generator </li>
                 <li>Access to Data Visualization Tool</li>
             </ul>
         </div>

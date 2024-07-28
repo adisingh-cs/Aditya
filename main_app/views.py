@@ -21,7 +21,7 @@ from django.http import HttpResponse
 from django.utils.timezone import now
 from .utils import *
 
-openai.api_key = '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'
+openai.api_key = 'randomkey'
 
 messages = [
     {"role": "system", "content": "system message"}

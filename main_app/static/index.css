@@ -8,11 +8,11 @@ body {
     overflow: hidden;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-::selection{
+::selection {
     color: white;
     background-color: #203542;
 }
@@ -119,12 +119,12 @@ img {
     }
 }
 
-#spinnerContainer h6{
+#spinnerContainer h6 {
     margin-top: 50px;
     cursor: default;
 }
 
-#spinnerContainer h6 b{
+#spinnerContainer h6 b {
     margin: 7px;
     font-size: 20px;
     color: #0056b3;
@@ -254,7 +254,7 @@ img {
     position: absolute;
     top: 45%;
     Left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -276,7 +276,7 @@ img {
     color: #575757;
 }
 
-.display h6{
+.display h6 {
     color: #575757;
 }
 
@@ -333,7 +333,7 @@ img {
     position: absolute;
     top: 45%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     height: 70%;
     width: 45%;
     padding: 7px;
@@ -344,7 +344,7 @@ img {
     overflow-y: scroll;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
@@ -453,7 +453,7 @@ img {
     transition: 0.47s ease;
 }
 
-.action ul li a{
+.action ul li a {
     color: #fff;
     text-decoration: none;
 }
@@ -476,7 +476,8 @@ img {
     transform: scale(1.2);
 }
 
-pre, code {
+pre,
+code {
     background-color: black;
     color: white;
     padding: 10px;
@@ -499,4 +500,66 @@ pre {
     border-radius: 3px;
     padding: 5px;
     cursor: pointer;
+}
+
+@media (max-width: 330px) {
+
+    #spinnerContainer{
+        text-align: center;
+    }
+
+    #spinnerContainer h6 {
+        margin-top: 50px;
+        font-size: 12px;
+    }
+    
+    #spinnerContainer h6 b {
+        margin: 7px;
+        font-size: 15px;
+        
+    }
+
+    #uploadFormContainer {
+        display: none;
+    }
+
+    .display {
+        width: 80%;
+    }
+
+    #conversation {
+        width: 90%;
+    }
+
+    #questionForm {
+        max-width: 300px;
+    }
+
+    #question {
+        max-width: 55%;
+        font-size: 0.8em;
+    }
+
+    #bt {
+        padding: 5px 7px;
+    }
+
+    #speakButton {
+        display: none;
+    }
+
+    .action {
+        margin: 0 0 0 -17px;
+    }
+
+    .action ul {
+        position: absolute;
+        right: 0px;
+        min-width: 270px;
+        bottom: 100px;
+    }
+
+    .action.active ul {
+        bottom: 50px;
+    }
 }

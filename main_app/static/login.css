@@ -70,11 +70,11 @@ header {
     margin-top: 50px;
 }
 
-.main-txt{
+.main-txt {
     position: relative;
     top: 50%;
     left: 27%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     height: 50%;
     width: 50%;
     border-radius: 17px;
@@ -83,7 +83,7 @@ header {
     transition: 0.47s ease;
 }
 
-.main-txt:hover{
+.main-txt:hover {
     background-color: #ffffffce;
 }
 
@@ -108,11 +108,11 @@ header {
     color: #203542;
 }
 
-.profile{
+.profile {
     position: absolute;
     top: 55%;
     left: 85%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     height: 300px;
     width: 300px;
@@ -123,7 +123,7 @@ header {
     border: 7px solid #ffffff;
 }
 
-.profile .name{
+.profile .name {
     position: relative;
     top: 94%;
     height: 30px;
@@ -166,4 +166,69 @@ header {
     top: 115%;
     left: 5%;
     opacity: 0;
+}
+
+
+/* Mobile View */
+
+@media (max-width: 330px) {
+
+    header {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img{
+        height: 40px;
+    }
+
+    .logo h3{
+        font-size: 30px;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+
+    .main-content {
+        left: 51%;
+        margin-top: 100px;
+    }
+
+    .profile {
+        display: none;
+    }
+
+    .main-txt {
+        top: 50%;
+        left: 50%;
+        height: 100%;
+        width: 98%;
+        border-radius: 10px;
+    }
+
+    .main-txt:hover {
+        background-color: #ffffffce;
+    }
+
+    .main-content h1 {
+        top: 2%;
+        left: 3%;
+        font-size: 2.5em;
+    }
+
+    .main-content p {
+        top: 4%;
+        left: 5%;
+        width: 90%;
+    }
+
+    .about {
+        display: none;
+    }
 }

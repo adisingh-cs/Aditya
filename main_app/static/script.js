@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const spinnerContainer = document.getElementById('spinnerContainer');
         spinnerContainer.style.opacity = '0';
         spinnerContainer.style.visibility = 'hidden';
-    }, 200);
+    }, 3700);
 });
 
 var recognition = null;

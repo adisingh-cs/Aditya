@@ -502,7 +502,7 @@ pre {
     cursor: pointer;
 }
 
-@media (max-width: 330px) {
+@media (max-width: 375px) {
 
     #spinnerContainer{
         text-align: center;
@@ -512,11 +512,11 @@ pre {
         margin-top: 50px;
         font-size: 12px;
     }
-    
+
     #spinnerContainer h6 b {
         margin: 7px;
         font-size: 15px;
-        
+
     }
 
     #uploadFormContainer {
@@ -549,7 +549,8 @@ pre {
     }
 
     .action {
-        margin: 0 0 0 -17px;
+        min-width: 30px;
+        margin: 0 0 0 -27px;
     }
 
     .action ul {

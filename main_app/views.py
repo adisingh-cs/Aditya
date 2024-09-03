@@ -31,7 +31,29 @@ os.makedirs(uploads_folder, exist_ok=True)
 
 messages = []
 
-# Create your views here.
+log_file_path = os.path.join(settings.BASE_DIR, 'log.txt')
+
+def is_ip_logged(ip_address):
+    if os.path.exists(log_file_path):
+        with open(log_file_path, 'r') as log_file:
+            log_data = log_file.readlines()
+            
+            for line in log_data:
+                if f"IP: {ip_address}" in line:
+                    return True
+    return False
+
+def log_request(request, question):
+    ip_address = request.META.get('REMOTE_ADDR')
+    user_agent = request.META.get('HTTP_USER_AGENT')
+    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+   
+    if not is_ip_logged(ip_address):
+        log_entry = f"{current_time} - IP: {ip_address}, User-Agent: {user_agent}, Question: {question}\n"
+        with open(log_file_path, 'a') as log_file:
+            log_file.write(log_entry)
+
 def login(request):
     context = {
         'page_title': 'Home Page'
@@ -50,6 +72,8 @@ def ask_question(request):
     if request.method == 'POST':
         data = json.loads(request.body.decode('utf-8'))
         question = data.get('question', '')
+        
+        log_request(request, question)
 
         personality_file = os.path.join(settings.BASE_DIR, 'personality.txt')
         with open(personality_file, "r") as file:

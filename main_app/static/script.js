@@ -179,6 +179,10 @@ function copyToClipboard(button) {
     document.body.removeChild(textarea);
     alert('Code copied to clipboard!');
 }
+
+let isSpeaking = false;
+let speech;
+
 function speakLatestResponse() {
     event.preventDefault();
     var latestResponseElement = document.querySelector('.assistant-message:last-child');
@@ -188,17 +192,26 @@ function speakLatestResponse() {
         if (latestResponse === "") {
             alert('Invalid request');
         } else {
-            speakText(latestResponse);
+            toggleSpeech(latestResponse);
         }
     } else {
         alert('Invalid request');
     }
 }
 
-function speakText(text) {
-    var speech = new SpeechSynthesisUtterance();
-    speech.text = text;
-    window.speechSynthesis.speak(speech);
+function toggleSpeech(text) {
+    if (isSpeaking) {
+        window.speechSynthesis.cancel();
+        isSpeaking = false;
+    } else {
+        speech = new SpeechSynthesisUtterance();
+        speech.text = text;
+        window.speechSynthesis.speak(speech);
+        isSpeaking = true;
+        speech.onend = function() {
+            isSpeaking = false;
+        };
+    }
 }
 
 async function uploadFile(event) {

@@ -21,6 +21,7 @@ from django.http import HttpResponse
 from django.utils.timezone import now
 from .utils import *
 
+openai.api_key = ''
 
 messages = [
     {"role": "system", "content": "system message"}

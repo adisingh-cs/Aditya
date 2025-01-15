@@ -72,7 +72,7 @@ def ask_question(request):
         messages.append({"role": "system", "content": mode})
         messages.append({"role": "user", "content": question})
         completion = openai.ChatCompletion.create(
-            model="gpt-4",
+            model="gpt-4o",
             messages=messages,
             temperature=0.8
         )
